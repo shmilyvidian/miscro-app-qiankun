@@ -24,6 +24,7 @@ export async function bootstrap(props) {
 
 };
 export async function mount(props) {
+    store(props);
     render(props)
 }
 export async function unmount(props) {
@@ -31,3 +32,12 @@ export async function unmount(props) {
 }
 
 
+function store(props) {
+    props.setGlobalState &&
+      props.setGlobalState({
+          app: {
+              name: 'name from sub vue'
+          }
+      });
+  }
+  
