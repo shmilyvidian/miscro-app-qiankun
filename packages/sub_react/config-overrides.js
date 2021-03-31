@@ -5,7 +5,7 @@ const addCustomize = () => config => {
       config.devtool = false;
       // 配置打包后的文件位置
       config.output.library = 'sub_react';
-    //   config.output.publicPath = '//localhost:3000/';
+      config.output.publicPath = '//localhost:3000/';
       config.output.libraryTarget = 'umd';
       config.output.jsonpFunction = `webpackJsonp_sub_react`;
     // }
