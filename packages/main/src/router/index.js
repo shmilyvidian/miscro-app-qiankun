@@ -3,11 +3,16 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes = []
+const routes = [
+  { 
+    path: '/sub_vue', 
+    component: () => import("@/views/sub_vue.vue"),
+  },
+]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: process.env.BASE_URL,
   routes
 })
 

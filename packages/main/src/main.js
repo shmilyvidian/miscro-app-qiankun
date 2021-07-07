@@ -4,7 +4,8 @@ import { registerMicroApps, start } from 'qiankun';
 import router from './router'
 import store from './store'
 Vue.config.productionTip = false
-
+const app = new window.GodSDK();
+app.init({});
 registerMicroApps([
   // {
   //   name: 'vue app', // app name registered

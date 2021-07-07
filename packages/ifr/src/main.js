@@ -16,13 +16,15 @@ class GodSDK {
 
   // 注册app
   register(micros, options, callback = {}){
+    const getActiveRule = (hash) => (location) => location.hash.startsWith(hash);
+
     if(!micros || micros.length === 0){
       micros = [
         {
           name: 'vue app', // app name registered
           entry: '//localhost:9000',
           container: '#microApp',
-          activeRule: '/sub_vue',
+          activeRule: getActiveRule('#/sub_vue'),
           props: options
         }
       ]
@@ -45,11 +47,12 @@ class GodSDK {
         callback['afterUnmount'].call(app)
       }
     })
+
+    start()
   }
 
   //应用启动
-  init(){
-    console.log('init');
+  init(vue){
     start()
   }
 

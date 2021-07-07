@@ -1,9 +1,9 @@
 <template>
   <div id="single-vue-app">
     
-    <router-link to="/home">home</router-link>
+    <router-link to="/sub_vue/home">home</router-link>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <router-link to="/about">about</router-link>
+    <router-link to="/sub_vue/about">about</router-link>
     <router-view></router-view>
   </div>
 </template>
