@@ -4,6 +4,8 @@
     |
     <router-link to="/sub_react">sub_react</router-link>
        <!-- 子应用容器 -->
+    <button @click="handleClick">handleClick1</button>
+
     <div id = "microApp">
       <router-view/>
     </div>
@@ -14,6 +16,15 @@
 
 export default {
   name: 'app',
+  mounted(){
+  
+  },
+  methods: {
+    handleClick: function (){
+      const app = new window.GodSDK()
+       app.init()
+    }
+  }
 }
 </script>
 

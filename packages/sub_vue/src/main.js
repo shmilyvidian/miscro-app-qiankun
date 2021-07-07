@@ -22,7 +22,7 @@ if (!window.__POWERED_BY_QIANKUN__) { // 默认独立运行
 // 子组件的协议就ok了
 export async function bootstrap(props) {
 
-};
+}
 export async function mount(props) {
     store(props);
     render(props)
